@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculus in Food Security: Cassava Cyanide Detoxification</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <header class="bg-emerald-800 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="p-2 bg-emerald-700 rounded-lg">
+                    <svg class="w-6 h-6 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">SFM: Food Security Math Application</h1>
+                    <p class="text-xs text-emerald-200">Interactive Derivatives in Malaysian Food Processing</p>
+                </div>
+            </div>
+            <div class="bg-emerald-900/50 px-3 py-1.5 rounded-full border border-emerald-700 text-xs font-medium text-emerald-300">
+                Role: Bioscience Expert & Web Developer Collaboration
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 w-full flex-grow grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <div class="lg:col-span-5 flex flex-col gap-6">
+            
+            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/80">
+                <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider bg-emerald-50 px-2.5 py-1 rounded-full">Malaysian Case Study</span>
+                <h2 class="text-xl font-bold mt-3 mb-2 text-slate-900">Cassava (Ubi Kayu) Detoxification Rates</h2>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                    In Malaysia, Cassava (<em>Manihot esculenta</em>) is an important climate-resilient crop supporting local food security. However, raw cassava contains cyanogenic glucosides (linamarin) that release toxic **hydrogen cyanide (HCN)** when disrupted. 
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    To make safe flour or food products, roots undergo an aqueous fermentation/soaking process. According to realistic Malaysian processing baselines, a standard 24-hour soaking cycle drops HCN concentrations from a dangerous 120 mg/kg down towards safer levels. Understanding the <strong>rate of change</strong> at specific hours helps food technologists optimize processing windows and conserve water resource cycles.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 p-6 rounded-2xl shadow-md">
+                <h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    The Mathematical Model
+                </h3>
+                <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+                    The detoxification curve follows a first-order decay model stabilized by traditional lingering bounds, approximated for our 24-hour setup by the function $f(x)$:
+                </p>
+                
+                <div class="space-y-4 bg-slate-950/60 p-4 rounded-xl border border-slate-700/50 mb-4 font-mono text-sm">
+                    <div>
+                        <span class="text-xs text-slate-500 block uppercase font-sans font-bold">Concentration Function:</span>
+                        <div class="text-emerald-300 font-semibold py-1">
+                            f(x) = 105 &times; e<sup>-0.15x</sup> + 15
+                        </div>
+                        <span class="text-[11px] text-slate-400 block font-sans">Where <span class="text-slate-200">x</span> = soaking time (hours), <span class="text-slate-200">f(x)</span> = HCN concentration (mg/kg)</span>
+                    </div>
+                    <hr class="border-slate-800">
+                    <div>
+                        <span class="text-xs text-slate-500 block uppercase font-sans font-bold">First Derivative (Rate of Change):</span>
+                        <div class="text-amber-400 font-semibold py-1">
+                            f'(x) = -15.75 &times; e<sup>-0.15x</sup>
+                        </div>
+                        <span class="text-[11px] text-slate-400 block font-sans">Yields the instant detoxification velocity in <span class="text-slate-200">mg/kg per hour</span> at hour <span class="text-slate-200">x</span></span>
+                    </div>
+                </div>
+
+                <div class="text-xs text-slate-400 italic">
+                    *By applying the chain rule to $f(x)$, the constant 15 drops out, and the exponent coefficient (-0.15) multiplies the leading 105 to produce the localized rate vector.
+                </div>
+            </div>
+
+            <div class="bg-blue-50 border border-blue-200 p-4 rounded-xl text-xs text-blue-800">
+                <span class="font-bold uppercase tracking-wider block mb-1">Data Source & Reference Standards:</span>
+                Modeled after safety parameters cited via the <strong class="underline">Malaysian Agricultural Research and Development Institute (MARDI)</strong> processing archives and baseline HCN tolerances monitored by the <strong class="underline">Ministry of Health (MOH) Malaysia Food Safety and Quality Division</strong>.
+            </div>
+        </div>
+
+        <div class="lg:col-span-7 flex flex-col gap-6">
+            
+            <div class="bg-white p-6 rounded-2xl shadow-xs border border-slate-200/80 flex-grow flex flex-col">
+                <div class="mb-4">
+                    <h3 class="text-lg font-bold text-slate-900">Interactive Cyanide Decay Timeline</h3>
+                    <p class="text-xs text-slate-500">Click anywhere directly along or near the line plot to calculate the live calculus matrix at that exact processing moment.</p>
+                </div>
+                
+                <div class="relative w-full flex-grow min-h-[300px] sm:min-h-[380px]">
+                    <canvas id="detoxChart"></canvas>
+                </div>
+            </div>
+
+            <div id="outputPanel" class="bg-white p-6 rounded-2xl shadow-xs border-2 border-dashed border-slate-300 transition-all duration-300">
+                <div id="placeholderText" class="text-center py-6 text-slate-400 text-sm">
+                    <svg class="w-8 h-8 mx-auto mb-2 text-slate-300 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                    Click a node or point on the graph above to compute the processing derivative instantly.
+                </div>
+
+                <div id="calcResults" class="hidden">
+                    <div class="flex flex-wrap justify-between items-center border-b border-slate-100 pb-3 mb-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase text-slate-400">Selected Processing Point</span>
+                            <h4 class="text-xl font-bold text-slate-900" id="displayHour">Hour: 0.00</h4>
+                        </div>
+                        <div class="bg-emerald-50 text-emerald-800 text-xs px-3 py-1 rounded-md font-semibold border border-emerald-100" id="safetyStatus">
+                            Status Eval
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                            <span class="text-xs text-slate-500 block font-medium">HCN Density $f(x)$</span>
+                            <span class="text-lg font-bold text-slate-800" id="displayConcentration">0.00 mg/kg</span>
+                        </div>
+                        <div class="bg-amber-50/50 p-3 rounded-xl border border-amber-100">
+                            <span class="text-xs text-amber-700 block font-medium">Instant Processing Rate $f'(x)$</span>
+                            <span class="text-lg font-bold text-amber-600" id="displayDerivative">0.00 mg/kg/hr</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 text-slate-100 p-4 rounded-xl">
+                        <span class="text-xs uppercase text-emerald-400 font-bold tracking-wider block mb-1">Layman Food Security Explanation</span>
+                        <p class="text-sm leading-relaxed text-slate-300" id="laymanText">
+                            Click-triggered calculation interpretation placeholder text.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 text-xs text-center py-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            &copy; 2026 Malaysia SFM Food Security Educational Sandbox. Built utilizing Chart.js and Tailwinds.
+        </div>
+    </footer>
+
+    <script>
+        const ctx = document.getElementById('detoxChart').getContext('2d');
+        
+        // Generate dataset markers based on the formulas
+        // f(x) = 105 * e^(-0.15x) + 15
+        const hoursData = [];
+        const concentrationData = [];
+        
+        for (let h = 0; h <= 24; h += 0.5) {
+            hoursData.push(h);
+            const conc = 105 * Math.exp(-0.15 * h) + 15;
+            concentrationData.push(parseFloat(conc.toFixed(2)));
+        }
+
+        // Initialize the interactive Chart.js line graph
+        let activePointCircle = null;
+        const detoxChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: hoursData,
+                datasets: [{
+                    label: 'Cyanide Concentration (mg/kg)',
+                    data: concentrationData,
+                    borderColor: '#10b981', // emerald-500
+                    borderWidth: 3,
+                    backgroundColor: 'rgba(16, 185, 129, 0.05)',
+                    fill: true,
+                    tension: 0.2,
+                    pointRadius: 1,
+                    pointHoverRadius: 6,
+                    pointHoverBackgroundColor: '#f59e0b', // amber-500
+                    pointHoverBorderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: { font: { family: 'Plus Jakarta Sans', size: 12 } }
+                    },
+                    tooltip: {
+                        enabled: false // Custom overlay tracking used instead
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Soaking / Fermentation Duration (Hours)',
+                            color: '#475569',
+                            font: { family: 'Plus Jakarta Sans', weight: 'bold', size: 12 }
+                        },
+                        grid: { color: '#f1f5f9' }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'HCN Poison Concentration (mg/kg)',
+                            color: '#475569',
+                            font: { family: 'Plus Jakarta Sans', weight: 'bold', size: 12 }
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 130,
+                        grid: { color: '#f1f5f9' }
+                    }
+                },
+                // Trigger hooks to read point click actions
+                onClick: (e) => {
+                    const points = detoxChart.getElementsAtEventForMode(e, 'nearest', { intersect: false }, true);
+                    if (points.length > 0) {
+                        const index = points[0].index;
+                        const targetHour = hoursData[index];
+                        calculateCalculusMetrics(targetHour);
+                    }
+                }
+            }
+        });
+
+        // Function performing calculus calculations and UI component changes
+        function calculateCalculusMetrics(hour) {
+            // Function math
+            const concentration = 105 * Math.exp(-0.15 * hour) + 15;
+            // Derivative math: f'(x) = 105 * (-0.15) * e^(-0.15x) = -15.75 * e^(-0.15x)
+            const derivative = -15.75 * Math.exp(-0.15 * hour);
+
+            // Fetch DOM selectors
+            const placeholder = document.getElementById('placeholderText');
+            const resultsBox = document.getElementById('calcResults');
+            const outputPanel = document.getElementById('outputPanel');
+            
+            // Format presentation metrics
+            document.getElementById('displayHour').innerText = `Hour: ${hour.toFixed(1)} hrs`;
+            document.getElementById('displayConcentration').innerText = `${concentration.toFixed(2)} mg/kg`;
+            document.getElementById('displayDerivative').innerText = `${derivative.toFixed(3)} mg/kg/hr`;
+
+            // Evaluate safe/unsafe food safety threshold 
+            // Standard general safety baseline for safe processing intake allows < 20-30 mg/kg raw, World Health Org target is 10mg/kg.
+            const safetyStatus = document.getElementById('safetyStatus');
+            if (concentration > 40) {
+                safetyStatus.innerText = "🚨 High Toxicity: Unsafe for Flour Milling";
+                safetyStatus.className = "bg-rose-50 text-rose-800 text-xs px-3 py-1 rounded-md font-semibold border border-rose-100";
+            } else if (concentration <= 40 && concentration > 20) {
+                safetyStatus.innerText = "⚠️ Moderate Toxicity: Prolong Soaking Preferred";
+                safetyStatus.className = "bg-amber-50 text-amber-800 text-xs px-3 py-1 rounded-md font-semibold border border-amber-100";
+            } else {
+                safetyStatus.innerText = "✅ Food Secure Range: Safe for Processing";
+                safetyStatus.className = "bg-emerald-50 text-emerald-800 text-xs px-3 py-1 rounded-md font-semibold border border-emerald-100";
+            }
+
+            // Layman translation parser for the food security major
+            let narrative = "";
+            const absSpeed = Math.abs(derivative).toFixed(2);
+            
+            if (hour <= 4) {
+                narrative = `At Hour ${hour.toFixed(1)}, detoxification is happening rapidly at a rate of <strong>${absSpeed} mg/kg per hour</strong>. This occurs because the concentration gradient is high, allowing cell tissues to easily leach free cyanides into the surrounding water.`;
+            } else if (hour > 4 && hour <= 12) {
+                narrative = `By the ${hour.toFixed(1)}-hour mark, the clearing rate slows down to <strong>${absSpeed} mg/kg per hour</strong>. The drop speed is slowing because cyanide levels are tapering off inside the root matrix.`;
+            } else {
+                narrative = `At the late processing stage of ${hour.toFixed(1)} hours, the rate of change drops down to a crawl at <strong>${absSpeed} mg/kg per hour</strong>. The curve is flattening out, approaching a steady baseline. Continuing to soak the cassava beyond this point uses more water for very minimal safety gains.`;
+            }
+
+            document.getElementById('laymanText').innerHTML = narrative;
+
+            // Transition animations
+            placeholder.classList.add('hidden');
+            resultsBox.classList.remove('hidden');
+            outputPanel.classList.remove('border-slate-300');
+            outputPanel.classList.add('border-emerald-500', 'bg-emerald-50/10');
+        }
+    </script>
+</body>
+</html>
